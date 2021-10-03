@@ -12,7 +12,6 @@
     }
   
     .options {
-      width: 50%;
       height: 100%;
       display: flex;
       align-items: center;
@@ -20,6 +19,7 @@
   
       .option {
         padding: 10px 15px;
+        overflow: visible;
       }
     }
   }

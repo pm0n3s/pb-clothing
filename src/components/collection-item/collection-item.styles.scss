@@ -4,6 +4,24 @@
     flex-direction: column;
     height: 350px;
     align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      width: 32%;
+      &:last-child {
+        display: none
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      width: 48%;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    
+    @media screen and (max-width: 570px) {
+      display: none;
+    }
   
     .image {
       width: 100%;
@@ -19,14 +37,14 @@
       display: flex;
       justify-content: space-between;
       font-size: 20px;
+      flex-wrap: wrap;
   
       .name {
-        width: 90%;
         margin-bottom: 15px;
       }
   
       .price {
-        width: 6%;
+        text-align: end;
       }
     }
 }

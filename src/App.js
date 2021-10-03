@@ -9,7 +9,7 @@ import Header from './components/header/header.component.jsx'
 
 function App() {
   return (
-    <div>
+    <div className='main'>
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
