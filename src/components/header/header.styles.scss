@@ -20,6 +20,10 @@
       .option {
         padding: 10px 15px;
         overflow: visible;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
   }
