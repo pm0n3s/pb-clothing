@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 // onAuthStateChanged
-import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 // collection, query, where
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
@@ -41,6 +41,7 @@ export const auth = getAuth(firebaseApp)
 export const firestore = getFirestore(firebaseApp)
 export const createUser = createUserWithEmailAndPassword
 export const signIn = signInWithEmailAndPassword
+export const signOutUser = signOut
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ 'prompt': 'select_account '})
