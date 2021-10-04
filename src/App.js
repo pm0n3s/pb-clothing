@@ -3,7 +3,7 @@ import './App.css';
 
 import { Switch, Route } from 'react-router';
 
-import { auth } from './firebase/firebase.utils'
+import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
 import Header from './components/header/header.component'
 import HomePage from './pages/homepage/homepage.component'
@@ -21,8 +21,19 @@ class App extends React.Component {
   unsubFromAuth = null
 
   componentDidMount() {
-    this.unsubFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user})
+    this.unsubFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if(userAuth){
+        const userRef = await createUserProfileDocument(userAuth)
+
+        this.setState({
+          currentUser: {
+            id: userRef.id,
+            ...userRef.data()
+          }
+        })
+      } else {
+        this.setState({currentUser: userAuth})
+      }
     })
   }
 

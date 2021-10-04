@@ -1,3 +1,9 @@
 .sign-in-and-sign-up {
-    color: #37393a
+    color: #37393a;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: 850px) {
+        display: block;
+    }
 }
