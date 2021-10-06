@@ -14,6 +14,9 @@
     border: none;
     cursor: pointer;
     border: 1px solid #37393a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
   
     &:hover {
       background-color: #f7f7f7;
@@ -29,6 +32,17 @@
       &:hover {
         background-color: #357ae8;
         
+      }
+    }
+
+    &.inverted {
+      background-color: #f7f7f7;
+      color: #37393a;
+      border: 1px solid #f7f7f7;
+
+      &:hover {
+        background-color: #37393a;
+        color: #f7f7f7;
       }
     }
 }
