@@ -14,8 +14,8 @@ const StripeCheckoutButton = ({ price }) => {
         <StripeCheckout 
             label='Checkout'
             name='pb Clothing'
-            billingAddress
-            shippingAddress
+            // billingAddress
+            // shippingAddress
             description={`Your total is $${price}`}
             ammount={priceForStripe}
             panelLabel='Checkout'
