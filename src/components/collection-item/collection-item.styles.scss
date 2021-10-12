@@ -1,20 +1,24 @@
 .collection-item {
-    width: 24%;
+    width: 22vw;
     display: flex;
     flex-direction: column;
     height: 350px;
     align-items: center;
     position: relative;
 
+    @media screen and (min-width: 1600px) {
+      width: 19vw;
+    }
+
     @media screen and (max-width: 1200px) {
-      width: 32%;
+      width: 30vw;
       &:last-child {
         display: none
       }
     }
 
     @media screen and (max-width: 850px) {
-      width: 48%;
+      width: 44vw;
       &:nth-child(3) {
         display: none;
       }
